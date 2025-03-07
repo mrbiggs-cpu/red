@@ -10,7 +10,8 @@ import {
   Settings, 
   Menu, 
   X, 
-  Bell 
+  Bell,
+  File as FileIcon
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/button'
@@ -40,11 +41,19 @@ const navItems: NavItem[] = [
     icon: <Users className="h-5 w-5" />,
   },
   {
+    title: 'Files',
+    href: '/dashboard/files',
+    icon: <FileIcon className="h-5 w-5" />,
+  },
+  {
     title: 'Settings',
     href: '/dashboard/settings',
     icon: <Settings className="h-5 w-5" />,
   },
+
 ]
+
+
 
 export default function DashboardLayout({
   children,
